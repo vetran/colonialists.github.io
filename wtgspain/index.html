@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>WTGSpain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,  maximum-scale=1, user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="libs/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="libs/chosen/chosen.min.css">
@@ -244,10 +245,10 @@
                         </select>
                     </div>
                     <div class="sort__view">
-                        <div class="sort__view-item sort__view-item--grid active">
+                        <div class="sort__view-item sort__view-item--grid active" title="Вид сеткой">
                             <i class="fa fa-th-large"></i>
                         </div>
-                        <div class="sort__view-item sort__view-item--list">
+                        <div class="sort__view-item sort__view-item--list" title="Вид списком">
                             <i class="fa fa-th-list"></i>
                         </div>
                     </div>
@@ -760,8 +761,111 @@
 </div>
 
 <footer class="footer">
-
-
+    <div class="footer__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">WTG Spain</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="social">
+                        <ul class="social__list">
+                            <li class="social__item">
+                                <a class="social__link" href="" target="_blank"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="" target="_blank"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="" target="_blank"><i class="fa fa-vk"></i></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="" target="_blank"><i class="fa fa-instagram"></i></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="" target="_blank"><i class="fa fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="logo logo--footer">
+                        <img class="logo__img" src="img/logo.png" alt="">
+                    </div>
+                    <div class="contact contact--footer">
+                        <ul class="contact__list">
+                            <li class="contact__item">
+                                <a href="tel:+380667774288" class="contact__link">
+                                    <span class="contact__icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                                    <span class="contact__text">+3 (066) 7774288</span>
+                                </a>
+                            </li>
+                            <li class="contact__item">
+                                <a href="tel:+380977774288" class="contact__link">
+                                    <span class="contact__icon contact__icon--mobile"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                                    <span class="contact__text">+3 (097) 7774288</span>
+                                </a>
+                            </li>
+                            <li class="contact__item">
+                                <a href="mailto:wtg.office@gmail.com" class="contact__link">
+                                    <span class="contact__icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                    <span class="contact__text">wtg.office@gmail.com</span>
+                                </a>
+                            </li>
+                            <li class="contact__item">
+                                <a href="skype:wtg.office?call" class="contact__link">
+                                    <span class="contact__icon"><i class="fa fa-skype" aria-hidden="true" style="color:#1abae2"></i></span>
+                                    <span class="contact__text">wtg.office</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="address">
+                        <!-- hcard microformat -->
+                        <div class="vcard">
+                            <div class="fn org">Wikimedia Foundation Inc.</div>
+                            <div class="adr">
+                                <div class="street-address">200 2nd Ave. South #358</div>
+                                <div>
+                                    <span class="locality">St. Petersburg</span>,
+                                    <abbr class="region" title="Florida">FL</abbr> <span class="postal-code">33701-4313</span>
+                                </div>
+                                <div class="country-name">USA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-us">
+                        <p>Задача WTGSpain помочь нашим клиентам найти самые лучшие предложения из присутствующих на рынке недвижимости в Испании и предоставить всю необходимую информацию для принятия решения о покупке. WTGSpain предлагает клиентам полный спектр услуг в квалифицированном подборе недвижимости, а также полное сопровождение по всем вопросам, касающимся поездки, приобретения недвижимости и обустройства в Испании.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="subscribe">
+                        <p class="subscribe__text">Получайте только лучшие предложения недвижимости в Испании. Оставьте свой <br> э-майл и подпишитесь на рассылку!</p>
+                        <form class="subscribe__form" action="">
+                            <div class="subscribe__wrapper">
+                                <input class="subscribe__input" name="email" type="email" placeholder="Ваш e-mail">
+                                <button class="subscribe__submit" type="submit">Подписаться</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <script src="libs/jquery/jquery-3.2.1.min.js"></script>
