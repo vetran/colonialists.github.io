@@ -75,6 +75,10 @@ body {
       display: block;
     }
   }
+  &--manager{
+    line-height: 22px;
+    background: transparent;
+  }
   &__list {
     padding-left: 12px;
   }
@@ -961,7 +965,7 @@ body {
 .clients {
   font-size: 0;
   position: relative;
-  margin-bottom: 20px;
+  margin: 20px 0;
   &__headline {
     font-size: 20px;
     text-transform: uppercase;
@@ -970,7 +974,12 @@ body {
     font-weight: bold;
     color: #666;
   }
+  &__wrapper{
+    position: relative;
+    padding: 0 15px;
+  }
   &__item {
+    outline: none;
     display: inline-block;
     width: 33.33333%;
     padding: 0 40px;
@@ -1001,7 +1010,83 @@ body {
     cursor: pointer;
     font-size: 20px;
     line-height: 20px;
-    color: #888;
+    color: #c7c7c7;
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    margin: auto;
+    &--left{
+      left: 0;
+    }
+    &--right{
+      right: 0;
+    }
+  }
+}
+
+.staff {
+  font-size: 0;
+  position: relative;
+  margin: 20px 0;
+  &__headline {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #666;
+    &:after {
+      content: '';
+      display: block;
+      width: 137px;
+      height: 7px;
+      margin: 10px auto 0;
+      background-image: url(../img/line.png);
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  &__wrapper{
+    position: relative;
+    margin: 30px 0;
+  }
+  &__item {
+    outline: none;
+    display: inline-block;
+    width: 25%;
+    padding: 0 40px;
+  }
+  &__photo {
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+  &__name {
+    font-size: 16px;
+    color: #777;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+  &__text {
+    display: block;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+  }
+  &__arrow {
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 20px;
+    color: #c7c7c7;
     position: absolute;
     top: 0;
     width: 20px;
@@ -1044,8 +1129,116 @@ body {
 }
 
 
+.request{
+  font-size: 16px;
+  min-height: 310px;
+  background: #ededed;
+  &__input {
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    border-radius: 3px;
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 13px;
+    &--textarea{
+      height: 140px;
+      resize: none;
+      margin-bottom: 5px;
+    }
+  }
+  &__text {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  &__submit {
+    display: block;
+    padding: 8px 16px;
+    font-weight: 400;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    user-select: none;
+    box-shadow: none;
+    background: none;
+    text-shadow: none;
+    filter: none;
+    height: auto;
+    min-width: 240px;
 
+    margin: 10px auto 0;
+    color: #fff;
+    background-color: @mainColor;
+    border-color: darken(@mainColor, 10%);
 
+    &:hover {
+      background: darken(@mainColor, 10%);
+    }
+  }
+}
+
+.manager-online{
+  font-size: 16px;
+  min-height: 310px;
+  background: #fff;
+  padding-top: 15px;
+  &__photo {
+    margin: 0 auto 15px;
+    width: 150px;
+    height: 150px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+  &__name{
+    text-transform: uppercase;
+    color: #666;
+    font-weight: bold;
+    padding-left: 15px;
+  }
+  &__text {
+    display: block;
+    font-size: 12px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+.pages{
+  text-align: center;
+  font-size: 16px;
+  min-height: 310px;
+  background: #fff;
+  padding-top: 15px;
+  &__logo {
+    margin: 0 auto 15px;
+    width: 150px;
+    height: 150px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+  &__link {
+    background: #f3f3f3;
+    padding: 10px;
+    color: #444;
+    font-size: 14px;
+    display: inline-block;
+    &--download{
+      margin-bottom: 30px;
+    }
+    &--partners{
+      margin-right: 5px;
+    }
+  }
+}
 
 
 
