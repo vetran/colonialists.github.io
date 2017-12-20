@@ -23,11 +23,14 @@ ul {
   list-style-type: none;
 }
 
-a {
+a  {
   color: #000;
   //color: @mainColor;
   &:hover {
     text-decoration: none;
+  }
+  &:focus{
+    outline: none;
   }
 }
 
@@ -111,6 +114,12 @@ body {
   &:hover {
     color: #fff;
     background: darken(@mainColor, 10%);
+  }
+  &:focus,
+  &:active{
+    color: #fff;
+    background: @mainColor;
+    text-decoration: none;
   }
   &__icon {
     line-height: 20px;
@@ -1455,6 +1464,214 @@ body {
 }
 
 
+
+
+.vlog{
+  background: fade(#000, 2%);
+  padding-bottom: 25px;
+  &__headline{
+    text-transform: uppercase;
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #212121;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Helvetica Neue","Segoe UI",Oxygen,Ubuntu,Cantarell,"Open Sans",sans-serif;
+  }
+  &__main{
+    position: relative;
+    &-image{
+      position: relative;
+      width: 100%;
+      height: auto;
+      display: block;
+      &:after{
+        content: '';
+        display: block;
+        //width: 100px;
+        //height: 70px;
+        width: 20%;
+        height: 25%;
+        background-size: cover;
+        background-image: url(../img/youtube_play_button.png);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+    &-link{
+      display: block;
+    }
+    &-title {
+      z-index: 1;
+      position: absolute;
+      bottom: -1px;
+      width: 100%;
+      padding: 5px 10px 10px;
+      background: rgba(255,255,255,.8);
+    }
+    &-category {
+      color: @mainColor;
+      font-weight: bold;
+      display: block;
+      font-size: 0.8em;
+      text-transform: uppercase;
+    }
+    &-text {
+      color: #212121;
+      -webkit-font-smoothing: antialiased;
+      font-family: "Helvetica Neue","Segoe UI",Oxygen,Ubuntu,Cantarell,"Open Sans",sans-serif;
+      font-weight: 400;
+      text-rendering: optimizeLegibility;
+      text-shadow: none;
+      text-transform: uppercase;
+      font-size: 1.4em;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__top{
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+    &-title {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      padding: 5px 10px 5px;
+      width: 100%;
+      background: rgba(255,255,255,.8);
+    }
+    &-category {
+      color: @mainColor;
+      font-weight: bold;
+      display: block;
+      font-size: 0.7em;
+      text-transform: uppercase;
+    }
+
+    &-image {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: auto;
+      &:after{
+        content: '';
+        display: block;
+        //width: 100px;
+        //height: 70px;
+        width: 20%;
+        height: 25%;
+        background-size: cover;
+        background-image: url(../img/youtube_play_button.png);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+    &-text {
+      margin: 2px 0 0;
+      font-size: 1.2em;
+      color: #212121;
+      -webkit-font-smoothing: antialiased;
+      font-family: "Helvetica Neue","Segoe UI",Oxygen,Ubuntu,Cantarell,"Open Sans",sans-serif;
+      font-weight: 400;
+      float: left;
+      text-align: left;
+      line-height: 1.3;
+      text-rendering: optimizeLegibility;
+      text-shadow: none;
+      text-transform: uppercase;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__list{
+    &-item{
+      padding-top: 14px;
+    }
+    &-link{
+      display: block;
+      &:after{
+        content: '';
+        display: table;
+        clear: both;
+        width: 100%;
+      }
+    }
+    &-subtitle {
+      font-size: .85em;
+      text-transform: uppercase;
+      display: block;
+      color: #666;
+      line-height: 1.2em;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    &-image{
+      position: relative;
+      display: block;
+      width: 30%;
+      height: auto;
+      float: left;
+      padding-right: 7px;
+      &:after{
+        content: '';
+        display: block;
+        //width: 100px;
+        //height: 70px;
+        width: 20%;
+        height: 25%;
+        background-size: cover;
+        background-image: url(../img/youtube_play_button.png);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+    &-title {
+      z-index: 1;
+      font-size: 1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      -webkit-font-smoothing: antialiased;
+      font-family: "Helvetica Neue","Segoe UI",Oxygen,Ubuntu,Cantarell,"Open Sans",sans-serif;
+      color: @mainColor;
+      float: left;
+      width: 70%;
+      line-height: 1em;
+      padding: 0;
+      margin-bottom: 5px;
+      //top: -2px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: block;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+
+  img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
 .video-blog{
   background: fade(#000, 2%);
   padding-bottom: 25px;
@@ -1512,7 +1729,6 @@ body {
       left: 0;
       right: 0;
       margin: auto;
-
     }
   }
 }
