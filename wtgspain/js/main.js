@@ -91,7 +91,6 @@ $(document).ready(function () {
                 searchItems.removeClass('active');
                 item.addClass('active');
             }
-
         });
 
         function makeChoices(item) {
@@ -113,11 +112,13 @@ $(document).ready(function () {
         form.on('change', function (event) {
             var target = $(event.target);
 
-            if(target.is('[type="checkbox"]')){
-                target.prop('disabled', true);
-                makeChoices(target);
+            if(target.is('[type="checkbox"]') && target.is(':checked')){
+               target.addClass('checked');
+               makeChoices(target);
             }
         });
+
+        $(document).on('click','.search__input.checked', function(){ return false });
 
         $(document).on('click','.search__choices-remove', function(){
             var $this =  $(this),
@@ -126,12 +127,16 @@ $(document).ready(function () {
 
             $this.parent().remove();
 
-            $('input[data-category="'+ category +'"][data-index="'+ index +'"]').prop('disabled', false).prop('checked', false);
+            $('input[data-category="'+ category +'"][data-index="'+ index +'"]').removeClass('checked').prop('checked', false);
 
         });
 
     })();
 
+    $('.news-item__trigger').on('click', function(){
+        $(this).remove();
+        $('.news-item__wrapper').slideDown('slow');
+    });
 
     $('.item__favorites').on('click', function () {
         var icon = $(this).find('.fa');
@@ -155,10 +160,6 @@ $(document).ready(function () {
 
     var range = document.getElementById('range');
 
-
-    var min = $('#min-price'),
-        max = $('#max-price');
-
     noUiSlider.create(range, {
         start: [0, 6000000],
         connect: true,
@@ -176,8 +177,8 @@ $(document).ready(function () {
 
     });
     range.noUiSlider.on('update', function(values, handle){
-        min.text(values[0]);
-        max.text(values[1]);
+        $('#min-price').text(values[0]);
+        $('#max-price').text(values[1]);
 
         $('[name="min_price"]').val(values[0]);
         $('[name="max_price"]').val(values[1]);
